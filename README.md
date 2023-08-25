@@ -6,7 +6,7 @@ This project implements a Generative Adversarial Network for generating handwrit
 
 **Result**
 
-![plot](./numbers/result.png)
+![plot](./numbers/result.jpg)
 
 **Dependencies:**
 
