@@ -4,6 +4,7 @@
 
 This project implements a Generative Adversarial Network for generating handwritten digit images. GANs consist of two neural networks, a generator, and a discriminator, which are trained in a competitive manner. The generator tries to produce realistic data, while the discriminator aims to distinguish between real and generated data.
 
+
 **Dependencies:**
 
 Python 3.x
@@ -13,6 +14,7 @@ TensorFlow
 NumPy
 
 Matplotlib
+
 
 **Usage**
 
@@ -32,6 +34,7 @@ Run the gan.py script to train the GAN:
 The GAN will begin training and generate digit images over epochs. Generated images will be saved to the numbers directory. 
 
 You can adjust the number of training epochs, batch size, and other parameters in the gan.py script to experiment with the training process.
+
 
 **Project Structure**
 
