@@ -7,8 +7,11 @@ This project implements a Generative Adversarial Network for generating handwrit
 **Dependencies:**
 
 Python 3.x
+
 TensorFlow
+
 NumPy
+
 Matplotlib
 
 **Usage**
