@@ -4,6 +4,9 @@
 
 This project implements a Generative Adversarial Network for generating handwritten digit images. GANs consist of two neural networks, a generator, and a discriminator, which are trained in a competitive manner. The generator tries to produce realistic data, while the discriminator aims to distinguish between real and generated data.
 
+**Result**
+
+![plot](./numbers/result.png)
 
 **Dependencies:**
 
