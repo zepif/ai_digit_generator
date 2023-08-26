@@ -1,4 +1,4 @@
-# ai_number_generator
+# ai_digit_generator
  
 **GAN for Digit Generation**
 
