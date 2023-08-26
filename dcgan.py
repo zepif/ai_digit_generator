@@ -9,7 +9,7 @@ from data_loader import DataLoader
 from discriminator import Discriminator
 from generator import Generator
 
-class GAN:
+class DCGAN:
     def __init__(self, architecture):
         self.random_dim = 100
         self.data_loader = DataLoader()
@@ -45,11 +45,11 @@ class GAN:
             print(f'Epoch {e}, Discriminator: {d_loss}, Generator: {g_loss}')
 
             if e % 10 == 0:
-                self.plot_generated_image(e)
+                self.plot_generated_images(e)
 
-    def plot_generated_images(self, epoch, generator, examples=10, dim=(1, 10), figsize=(10, 1)):
-        noise = np.random.normal(0, 1, size=[examples, random_dim])
-        generated_images = generator.predict(noise)
+    def plot_generated_images(self, epoch, examples=10, dim=(1, 10), figsize=(10, 1)):
+        noise = np.random.normal(0, 1, size=[examples, self.random_dim])
+        generated_images = self.generator.predict(noise)
         generated_images = generated_images.reshape(examples, 28, 28)
 
         plt.figure(figsize=figsize)
@@ -58,4 +58,4 @@ class GAN:
             plt.imshow(generated_images[i], interpolation='nearest', cmap='gray_r')
             plt.axis('off')
         plt.tight_layout()
-        plt.savefig(f'numbers/gan_generated_image_epoch_{epoch}.png')
+        plt.savefig(f'gan2_generated_image_epoch_{epoch}.png')
