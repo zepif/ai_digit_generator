@@ -1,8 +1,11 @@
-from tensorflow.keras.layers import Conv2D, LeakyReLU, BatchNormalization, Flatten, Dense
+from tensorflow.keras.layers import Conv2D, LeakyReLU, BatchNormalization, Flatten, Dense, Reshape, Conv2DTranspose
 from tensorflow.keras.models import Sequential
+from tensorflow.keras.optimizers import Adam
 
 class Generator:
     def __init__(self, architecture='gan1'):
+        self.random_dim = 100
+
         self.generator = self.build_generator(architecture)
 
     def build_generator(self, architecture):

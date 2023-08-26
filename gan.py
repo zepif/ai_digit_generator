@@ -12,7 +12,7 @@ from generator import Generator
 class GAN:
     def __init__(self, architecture):
         self.random_dim = 100
-        self.data_loader = DataLoader()
+        self.data_loader = DataLoader(architecture)
         self.discriminator = Discriminator(architecture).discriminator
         self.generator = Generator(architecture).generator
         self.discriminator.trainable = False
@@ -45,7 +45,7 @@ class GAN:
             print(f'Epoch {e}, Discriminator: {d_loss}, Generator: {g_loss}')
 
             if e % 10 == 0:
-                self.plot_generated_image(e)
+                self.plot_generated_images(e)
 
     def plot_generated_images(self, epoch, generator, examples=10, dim=(1, 10), figsize=(10, 1)):
         noise = np.random.normal(0, 1, size=[examples, random_dim])

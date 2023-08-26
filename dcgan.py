@@ -12,7 +12,7 @@ from generator import Generator
 class DCGAN:
     def __init__(self, architecture):
         self.random_dim = 100
-        self.data_loader = DataLoader()
+        self.data_loader = DataLoader(architecture)
         self.discriminator = Discriminator(architecture).discriminator
         self.generator = Generator(architecture).generator
         self.discriminator.trainable = False

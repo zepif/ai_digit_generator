@@ -1,8 +1,11 @@
-from tensorflow.keras.layers import Conv2D, LeakyReLU, BatchNormalization, Flatten, Dense
+from tensorflow.keras.layers import Conv2D, LeakyReLU, BatchNormalization, Flatten, Dense, Reshape, Conv2DTranspose
 from tensorflow.keras.models import Sequential
+from tensorflow.keras.optimizers import Adam
 
 class Discriminator:
     def __init__(self, architecture='gan1'):
+        self.img_shape = (28, 28, 1)
+
         self.discriminator = self.build_discriminator(architecture)
 
     def build_discriminator(self, architecture):
