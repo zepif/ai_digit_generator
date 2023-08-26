@@ -2,9 +2,6 @@ import os
 import argparse
 import tensorflow as tf
 
-from gan import GAN
-from dcgan import DCGAN
-
 def set_cuda():
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
@@ -20,10 +17,12 @@ def main():
     args = parser.parse_args()
 
     if args.architecture == "gan1":
+        from gan import GAN
         gan1 = GAN(architecture='gan1')  # Create GAN instance for 'gan1' architecture
         gan1.train_gan(epochs=100, batch_size=128)
     elif args.architecture == "gan2":
-        gan2 = GAN(architecture='gan2')  # Create GAN instance for 'gan2' architecture
+        from dcgan import DCGAN
+        gan2 = DCGAN(architecture='gan2')  # Create GAN instance for 'gan2' architecture
         gan2.train_gan(epochs=200, batch_size=128)
     else:
         print("Invalid architecture choice. Use 'gan1' or 'gan2'.")
