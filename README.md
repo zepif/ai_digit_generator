@@ -6,7 +6,13 @@ This project implements a Generative Adversarial Network for generating handwrit
 
 **Result**
 
+**gan result**
+
 ![plot](./numbers/result.jpg)
+
+**dcgun result**
+
+in process...
 
 **Dependencies:**
 
@@ -31,7 +37,9 @@ Ensure you have the required dependencies installed. You can install them using 
 
 Run the gan.py script to train the GAN:
 
-`python gan.py`
+`python main.py --architecture ...`
+
+It could be 'gan1' to run gan or 'gan2' to run dcgan
 
 
 The GAN will begin training and generate digit images over epochs. Generated images will be saved to the numbers directory. 
