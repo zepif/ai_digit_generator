@@ -21,6 +21,7 @@ def main():
         gan1 = GAN(architecture='gan1')  # Create GAN instance for 'gan1' architecture
         gan1.train_gan(epochs=100, batch_size=128)
     elif args.architecture == "gan2":
+        #print("check")
         from dcgan import DCGAN
         gan2 = DCGAN(architecture='gan2')  # Create GAN instance for 'gan2' architecture
         gan2.train_gan(epochs=200, batch_size=128)

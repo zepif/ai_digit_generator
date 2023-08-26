@@ -58,4 +58,4 @@ class DCGAN:
             plt.imshow(generated_images[i], interpolation='nearest', cmap='gray_r')
             plt.axis('off')
         plt.tight_layout()
-        plt.savefig(f'gan2_generated_image_epoch_{epoch}.png')
+        plt.savefig(f'dcgan_generated_image_epoch_{epoch}.png')
