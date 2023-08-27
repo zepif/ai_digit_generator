@@ -42,9 +42,9 @@ Run the gan.py script to train the GAN:
 It could be 'gan1' to run gan or 'gan2' to run dcgan
 
 
-The GAN will begin training and generate digit images over epochs. Generated images will be saved to the numbers directory. 
+The GAN/DCGAN will begin training and generate digit images over epochs. Generated images will be saved to the numbers directory. 
 
-You can adjust the number of training epochs, batch size, and other parameters in the gan.py script to experiment with the training process.
+You can adjust the number of training epochs, batch size in the gan.py/dcgan.py script or you can change other parameters in generator.py/discriminator.py to experiment with the training process.
 
 
 **Project Structure**
