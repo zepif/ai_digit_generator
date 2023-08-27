@@ -1,6 +1,6 @@
 # ai_digit_generator
  
-**GAN for Digit Generation**
+**DC/GAN for Digit Generation**
 
 This project implements a Generative Adversarial Network and Deep Concolutional Generative Adversarial Network for generating handwritten digit images. GANs and DCGANs consist of two neural networks, a generator, and a discriminator, which are trained in a competitive manner. The generator tries to produce realistic data, while the discriminator aims to distinguish between real and generated data.
 
