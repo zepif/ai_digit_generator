@@ -35,7 +35,7 @@ Ensure you have the required dependencies installed. You can install them using 
 
 `pip install tensorflow numpy matplotlib`
 
-Run the gan.py script to train the GAN:
+Run the main.py script to train the GAN/DCGAN:
 
 `python main.py --architecture ...`
 
