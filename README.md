@@ -8,11 +8,11 @@ This project implements a Generative Adversarial Network for generating handwrit
 
 **gan result**
 
-![plot](./numbers/result.jpg)
+![plot](./numbers/result_gan.jpg)
 
 **dcgun result**
 
-in process...
+![plot](./numbers/result_dcgan.jpg)
 
 **Dependencies:**
 
