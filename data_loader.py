@@ -8,7 +8,7 @@ class DataLoader:
     def load_data(self, architecture):
         (X_train, _), (_, _) = mnist.load_data()
         X_train = X_train / 127.5 - 1.0
-
+        #print(np.unique(X_train))
         if (architecture == 'gan1'):
             X_train = X_train.reshape(X_train.shape[0], 784)
         elif (architecture == 'gan2'):

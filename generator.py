@@ -28,10 +28,10 @@ class Generator:
             generator.add(Reshape((7, 7, 128)))
             generator.add(Conv2DTranspose(128, kernel_size=3, strides=2, padding='same'))
             generator.add(BatchNormalization())
-            generator.add(LeakyReLU(alpha=0.01))
+            generator.add(LeakyReLU(alpha=0.2))
             generator.add(Conv2DTranspose(64, kernel_size=3, strides=1, padding='same'))
             generator.add(BatchNormalization())
-            generator.add(LeakyReLU(alpha=0.01))
+            generator.add(LeakyReLU(alpha=0.2))
             generator.add(Conv2DTranspose(1, kernel_size=3, strides=2, padding='same', activation='tanh'))
         else:
             raise ValueError("Invalid architecture name. Use 'gan1' or 'gan2'.")

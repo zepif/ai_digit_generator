@@ -31,6 +31,10 @@ class GAN:
                 generated_images = self.generator.predict(noise)
                 image_batch = self.data_loader.X_train[np.random.randint(0, self.data_loader.X_train.shape[0], size=batch_size)]
 
+                '''plt.hist(image_batch, bins=np.arange(-3,3,0.1))
+                plt.hist(generated_images, bins=np.arange(-3,3,0.1))
+                plt.show()'''
+
                 # Discriminator training
                 self.discriminator.trainable = True
                 d_loss_real = self.discriminator.train_on_batch(image_batch, np.ones(batch_size))

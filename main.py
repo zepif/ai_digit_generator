@@ -24,7 +24,7 @@ def main():
         #print("check")
         from dcgan import DCGAN
         gan2 = DCGAN(architecture='gan2')  # Create GAN instance for 'gan2' architecture
-        gan2.train_gan(epochs=200, batch_size=128)
+        gan2.train_gan(epochs=200, batch_size=256)
     else:
         print("Invalid architecture choice. Use 'gan1' or 'gan2'.")
 

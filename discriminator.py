@@ -21,11 +21,10 @@ class Discriminator:
             discriminator.add(Dense(1, activation='sigmoid'))
             discriminator.compile(loss='binary_crossentropy', optimizer='adam')
         elif architecture == 'gan2':
-            discriminator.add(Conv2D(64, kernel_size=3, strides=2, padding='same', input_shape=self.img_shape))
-            discriminator.add(LeakyReLU(alpha=0.01))
+            discriminator.add(Conv2D(64, kernel_size=3, strides=2, padding='same', input_shape=(28, 28, 1)))
+            discriminator.add(LeakyReLU(0.2))
             discriminator.add(Conv2D(128, kernel_size=3, strides=2, padding='same'))
-            discriminator.add(BatchNormalization())
-            discriminator.add(LeakyReLU(alpha=0.01))
+            discriminator.add(LeakyReLU(0.2))
             discriminator.add(Flatten())
             discriminator.add(Dense(1, activation='sigmoid'))
             discriminator.compile(loss='binary_crossentropy',
