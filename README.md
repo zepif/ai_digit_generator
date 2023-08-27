@@ -49,7 +49,11 @@ You can adjust the number of training epochs, batch size, and other parameters i
 
 **Project Structure**
 
-gan.py: The main script that defines the GAN class, loads data, trains the GAN, and generates images.
+main.py: The main script that defines gpu, the GAN and DCGAN class, loads data, trains the models, and generates images. 
+
+gan.py: Contains GAN class for training and generating.
+
+dcgan.py: Contains DCGAN class for training and generating.
 
 data_loader.py: Contains a DataLoader class for loading and preprocessing the MNIST dataset.
 
