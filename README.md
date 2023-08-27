@@ -8,11 +8,11 @@ This project implements a Generative Adversarial Network for generating handwrit
 
 **gan result**
 
-![plot](./numbers/result.jpg)
+![plot](./numbers/result_gan.jpg)
 
 **dcgun result**
 
-in process...
+![plot](./numbers/result_dcgan.jpg)
 
 **Dependencies:**
 
@@ -49,7 +49,11 @@ You can adjust the number of training epochs, batch size in the gan.py/dcgan.py 
 
 **Project Structure**
 
-gan.py: The main script that defines the GAN class, loads data, trains the GAN, and generates images.
+main.py: The main script that defines gpu, the GAN and DCGAN class, loads data, trains the models, and generates images. 
+
+gan.py: Contains GAN class for training and generating.
+
+dcgan.py: Contains DCGAN class for training and generating.
 
 data_loader.py: Contains a DataLoader class for loading and preprocessing the MNIST dataset.
 
